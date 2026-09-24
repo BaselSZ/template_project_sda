@@ -36,6 +36,8 @@ DB_CONFIG = {
 }
 
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+CHROMA_HOST = os.environ.get("CHROMA_HOST", "localhost")
+CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
 
 model = "gpt-5.6-luna"
 
@@ -46,7 +48,7 @@ llm = ChatOpenAI(model=model)
 
 # LangChain setup
 embedding_function = OpenAIEmbeddings()
-chroma_client = chromadb.HttpClient(host='localhost', port=8000)
+chroma_client = chromadb.HttpClient(host=CHROMA_HOST, port=CHROMA_PORT)
 collection = chroma_client.get_or_create_collection("langchain")
 vectorstore = Chroma(
     client=chroma_client,
