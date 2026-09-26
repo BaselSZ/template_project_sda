@@ -43,3 +43,4 @@ docker compose up --build -d
 ```
 
 In the end, you should be able to access the application via the VM’s public IP address, with data stored in the Azure Database for PostgreSQL server and files stored in Azure Blob Storage.
+TEST GITHub actions!!!
