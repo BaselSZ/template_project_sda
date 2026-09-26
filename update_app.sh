@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-cd /home/azureuser/template_project_sda
+cd /home/azureuser/SDA/template_project_sda
 
 echo "Pulling latest Docker images..."
 
