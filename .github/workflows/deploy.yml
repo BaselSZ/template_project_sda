@@ -58,7 +58,7 @@ jobs:
             --resource-group "dev-TemplateProjectSDA-6bi" \
             --name "dev-web-vm-6bi" \
             --command-id RunShellScript \
-            --scripts "sudo -u azureuser -H bash /home/azureuser/template_project_sda/update_app.sh && echo DEPLOY_OK" \
+            --scripts "sudo -u azureuser -H bash /home/azureuser/SDA/template_project_sda/update_app.sh && echo DEPLOY_OK" \
             --query "value[0].message" -o tsv)
 
           echo "$out"
